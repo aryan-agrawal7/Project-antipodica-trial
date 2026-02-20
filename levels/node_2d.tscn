@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bk1nyeevmnxp8"]
+
+[ext_resource type="Script" uid="uid://di3scnhvp2usm" path="res://Scripts/button.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=43129956]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1918595544]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1880498237]
+offset_left = 455.0
+offset_top = 524.0
+offset_right = 727.0
+offset_bottom = 603.0
+text = "Start"
+script = ExtResource("1_wtcfe")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bchv5kwqtocbc"]
+
+[ext_resource type="Script" uid="uid://dfwd4kj7bq7ek" path="res://levels/Choice.gd" id="1_pwgnt"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_f8p7h"]
+resource_name = "Group for Suit"
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_syetj"]
+resource_name = "Shhip Choice"
+
+[node name="ChoseOption" type="Node2D" unique_id=499059781]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1193683561]
+script = ExtResource("1_pwgnt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=231842122]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1159.0
+offset_bottom = 650.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=2105421886]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Chose your suit"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=253966299]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=103302311]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f8p7h")
+text = "Suit A"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=621606136]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_f8p7h")
+text = "Suit B"
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1426641710]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Chose your ship"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1981084468]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1852148504]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_syetj")
+text = "Ship A"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=702116641]
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_syetj")
+text = "Ship B"
+
+[node name="Start" type="Button" parent="CanvasLayer" unique_id=2003838550]
+offset_left = 446.0
+offset_top = 370.0
+offset_right = 707.0
+offset_bottom = 429.0
+text = "Start Game"
+
+[connection signal="pressed" from="CanvasLayer/Start" to="CanvasLayer" method="_on_start_pressed"]
