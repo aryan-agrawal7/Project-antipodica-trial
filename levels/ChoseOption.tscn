@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bchv5kwqtocbc"]
 
-[ext_resource type="Script" uid="uid://dfwd4kj7bq7ek" path="res://levels/Choice.gd" id="1_pwgnt"]
+[ext_resource type="Script" uid="uid://dfwd4kj7bq7ek" path="res://Scripts/Choice.gd" id="1_pwgnt"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_f8p7h"]
 resource_name = "Group for Suit"
@@ -31,6 +31,7 @@ layout_mode = 2
 [node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=103302311]
 layout_mode = 2
 toggle_mode = true
+button_pressed = true
 button_group = SubResource("ButtonGroup_f8p7h")
 text = "Suit A"
 
@@ -52,6 +53,7 @@ layout_mode = 2
 [node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1852148504]
 layout_mode = 2
 toggle_mode = true
+button_pressed = true
 button_group = SubResource("ButtonGroup_syetj")
 text = "Ship A"
 
