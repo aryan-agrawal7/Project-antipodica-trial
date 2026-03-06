@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bk1nyeevmnxp8"]
 
-[ext_resource type="Script" uid="uid://di3scnhvp2usm" path="res://Scripts/button.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://di3scnhvp2usm" path="res://Scripts/StartScreen.gd" id="1_wtcfe"]
 
 [node name="Node2D" type="Node2D" unique_id=43129956]
+script = ExtResource("1_wtcfe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1918595544]
 
@@ -12,6 +13,14 @@ offset_top = 524.0
 offset_right = 727.0
 offset_bottom = 603.0
 text = "Start"
-script = ExtResource("1_wtcfe")
 
+[node name="BtnSettings" type="Button" parent="CanvasLayer" unique_id=1425583887]
+offset_left = 502.0
+offset_top = 384.0
+offset_right = 684.0
+offset_bottom = 450.0
+text = "Settings"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/BtnSettings" to="." method="_on_settings_button_pressed"]

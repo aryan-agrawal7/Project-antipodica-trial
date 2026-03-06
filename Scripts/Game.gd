@@ -23,3 +23,6 @@ func _on_pause_pressed() -> void:
 
 func _on_resume_pressed() -> void:
 	change_visibility()
+	
+func _on_settings_pressed() -> void:
+	SettingsMenu.show()
