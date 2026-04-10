@@ -4,3 +4,11 @@ extends CanvasLayer
 @onready var ship_buttons = $VBoxContainer/HBoxContainer/Button.button_group
 #hahah
 #second commit
+func _on_start_pressed() -> void:
+	var selected_suit = suit_buttons.get_pressed_button().text
+	var selected_ship = ship_buttons.get_pressed_button().text
+	GameDetails.ShipSelected = selected_ship
+	GameDetails.SuitSelected = selected_suit
+	get_tree().change_scene_to_file("res://levels/level_2.tscn.tscn")
+
+#third commit
